@@ -1,0 +1,27 @@
+body {
+  font-family: 'Inter', sans-serif;
+}
+.hidden {
+  display: none;
+}
+section {
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.dark section {
+  background: #2d3748;
+}
+button {
+  transition: all 0.3s ease;
+}
+button:hover {
+  transform: scale(1.05);
+}
+input, textarea, select {
+  transition: all 0.3s ease;
+}
+canvas {
+  max-width: 100%;
+}

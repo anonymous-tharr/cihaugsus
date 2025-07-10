@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATHARSYAH 10.0</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1a202c">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 min-h-screen flex flex-col">
+  <header class="bg-white dark:bg-gray-800 shadow p-4 sticky top-0 z-10">
+    <div class="flex justify-between items-center">
+      <h1 class="text-2xl font-bold">ATHARSYAH 10.0</h1>
+      <button id="toggle-dark-mode" class="p-2 bg-gray-200 dark:bg-gray-700 rounded">🌙</button>
+    </div>
+  </header>
+  <nav class="grid grid-cols-2 gap-4 p-4">
+    <button onclick="showSection('habit')" class="p-4 bg-blue-500 text-white rounded-lg hover:bg-blue-600">📌 Habit Tracker</button>
+    <button onclick="showSection('sholat')" class="p-4 bg-green-500 text-white rounded-lg hover:bg-green-600">🕌 Waktu Shalat</button>
+    <button onclick="showSection('jurnal')" class="p-4 bg-purple-500 text-white rounded-lg hover:bg-purple-600">📓 Jurnal</button>
+    <button onclick="showSection('mood')" class="p-4 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600">😄 Mood Tracker</button>
+    <button onclick="showSection('uang')" class="p-4 bg-red-500 text-white rounded-lg hover:bg-red-600">💸 Uang Tracker</button>
+    <button onclick="showSection('library')" class="p-4 bg-teal-500 text-white rounded-lg hover:bg-teal-600">📚 Library Elite</button>
+    <button onclick="showSection('notebook')" class="p-4 bg-indigo-500 text-white rounded-lg hover:bg-indigo-600">🗒️ Notebook</button>
+    <button onclick="showSection('dashboard')" class="p-4 bg-pink-500 text-white rounded-lg hover:bg-pink-600">📊 AtharMeter</button>
+    <button onclick="showSection('refleksi')" class="p-4 bg-orange-500 text-white rounded-lg hover:bg-orange-600">🔁 Refleksi</button>
+    <button onclick="showSection('gym')" class="p-4 bg-gray-500 text-white rounded-lg hover:bg-gray-600">🏋️ Gym Tracker</button>
+    <button onclick="showSection('ai-chat')" class="p-4 bg-blue-700 text-white rounded-lg hover:bg-blue-800">🧠 AI Chat</button>
+    <button onclick="showSection('settings')" class="p-4 bg-gray-600 text-white rounded-lg hover:bg-gray-700">⚙️ Pengaturan</button>
+  </nav>
+  <main id="main-content" class="p-4 flex-grow">
+    <section id="habit" class="hidden"></section>
+    <section id="sholat" class="hidden"></section>
+    <section id="jurnal" class="hidden"></section>
+    <section id="mood" class="hidden"></section>
+    <section id="uang" class="hidden"></section>
+    <section id="library" class="hidden"></section>
+    <section id="notebook" class="hidden"></section>
+    <section id="dashboard" class="hidden"></section>
+    <section id="refleksi" class="hidden"></section>
+    <section id="gym" class="hidden"></section>
+    <section id="ai-chat" class="hidden"></section>
+    <section id="settings" class="hidden"></section>
+  </main>
+  <footer class="bg-white dark:bg-gray-800 p-4 text-center">
+    <p>&copy; 2025 ATHARSYAH 10.0 - Dibuat untuk anak muda Muslim!</p>
+  </footer>
+  <script src="script.js"></script>
+  <script src="habit.js"></script>
+  <script src="sholat.js"></script>
+  <script src="jurnal.js"></script>
+  <script src="mood.js"></script>
+  <script src="uang.js"></script>
+  <script src="library.js"></script>
+  <script src="notebook.js"></script>
+  <script src="dashboard.js"></script>
+  <script src="refleksi.js"></script>
+  <script src="gym.js"></script>
+  <script src="ai-chat.js"></script>
+  <script src="utils.js"></script>
+  <script src="data.js"></script>
+  <script src="settings.js"></script>
+  <script src="export.js"></script>
+  <script src="darkmode.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js').then(() => {
+        console.log('Service Worker Registered');
+      });
+    }
+  </script>
+</body>
+</html>
